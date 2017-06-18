@@ -1,0 +1,4 @@
+clc;clear all;
+mydir='../neg/';
+temp1=dir([mydir,'*.dat']);
+num_temp1=length(temp1);

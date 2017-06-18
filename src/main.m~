@@ -1,0 +1,22 @@
+clc;
+clear all;
+train_set = [];
+my_dir = '../data/';
+
+train_set = cell(10);
+for i = 1: 
+
+for in_class = 1:10
+    str_folder = num2str(in_class);
+    for i = 1:36
+        str_file = num2str(i);
+        if(length(str_file) < 2)
+            str_pre = ['0',str_file];
+        else 
+            str_pre = str_file;
+        end
+        name = [str_pre,'_flower',str_folder,'.jpg'];
+        tmp_iamge = imread([my_dir,str_folder,'/train/',name]);
+        tmp_feature = get_feature(tmp_iamge);
+        train_set{in_class} 
+    end
